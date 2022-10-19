@@ -1,5 +1,5 @@
 pipeline{
-    agent (label 'springpetclinic')
+    agent { label 'springpetclinic' }
     triggers { ('* * * * *')
 
     }
