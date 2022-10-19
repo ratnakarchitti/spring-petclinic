@@ -1,5 +1,5 @@
 pipeline{
-    agent (label 'maven')
+    agent (label 'springpetclinic')
     triggers { ('* * * * *')
 
     }
