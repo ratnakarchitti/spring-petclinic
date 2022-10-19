@@ -1,5 +1,5 @@
 pipeline{
-    agent (label 'JDK-11-MVN')
+    agent (label 'JDK11')
     triggers { ('* * * * *')
 
     }
