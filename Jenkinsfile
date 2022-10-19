@@ -1,19 +1,18 @@
 pipeline{
     agent { label 'springpetclinic' }
-    triggers { ('* * * * *')
+    triggers { 
+        cron ('* * * * *')
 
     }
     stages {
         satge ('vcs') {
             steps {
-                git url: 'https://github.com/ratnakarchitti/spring-petclinic.git'
+                git url: 'https://github.com/ratnakarchitti/spring-petclinic.git',
+                branch : 'develop'
+
             }
         }
-        stage {
-            steps ('build') {
-                sh 'mvn package'
-            }
-        }
+        
 
     }
 }
