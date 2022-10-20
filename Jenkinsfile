@@ -1,5 +1,5 @@
 pipeline{
-    agent { label 'springpetclinic' }
+    agent { label 'Jenkins' }
     triggers { 
         cron ('* * * * *')
 
@@ -8,7 +8,7 @@ pipeline{
         satge ('vcs') {
             steps {
                 git url: 'https://github.com/ratnakarchitti/spring-petclinic.git',
-                branch : 'develop'
+                branch : 'devops'
 
             }
         }
